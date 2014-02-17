@@ -1,0 +1,16 @@
+<template name="header">
+    <div class="row">
+        <div class="col-lg-12 well">
+            <h1 class="brand col-lg-2" ><a class="brand" href="{{pathFor 'todosList'}}">To-Do</a></h1>
+            {{#if currentUser}}
+            Hi, {{ user_name }}!
+            <a class="btn btn-warning  sign_out pull-right" type="button" href="javascript:;">Sign Out</a>
+            {{else}}
+            <div class="btn-group pull-right">
+                <a class="btn btn-primary  sign_in"  href="{{pathFor 'login'}}">Sign In</a>
+                <a class="btn btn-warning  sign_in"  href="{{pathFor 'register'}}">Sign Up</a>
+            </div>
+            {{/if}}
+        </div>
+    </div>
+</template>

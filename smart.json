@@ -1,0 +1,9 @@
+{
+  "packages": {
+    "iron-router": {},
+    "uikit-2": {},
+    "uikit": {},
+    "marked": {},
+    "codemirror": {}
+  }
+}

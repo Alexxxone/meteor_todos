@@ -1,0 +1,6 @@
+<template name="user_todos">
+    <h1>{{ user.profile.name }} Todos! </h1>
+    {{#each user_todos}}
+        {{> todo}}
+    {{/each}}
+</template>

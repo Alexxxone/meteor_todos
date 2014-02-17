@@ -1,0 +1,12 @@
+<template name="register">
+    <form id="register-form" action="action" class="form-vertical">
+        <div>
+            <input type="email" id="account-email" placeholder="Email"/>
+            <input type="password" id="account-password" placeholder="Password"/>
+            <input type="password" id="confirmation_account-password" placeholder="Password Confirmation" />
+            <input type="text" id="account-name" placeholder="Your Name" />
+            <input type="submit" id="create-account" class="btn btn-success btn-sm" value="Create an Account" />
+            <a  class="btn btn-info  btn-sm sign_up" href="{{pathFor 'login'}}">Sign In</a>
+        </div>
+    </form>
+</template>

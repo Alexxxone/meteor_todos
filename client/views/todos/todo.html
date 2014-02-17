@@ -1,0 +1,18 @@
+<template name="todo">
+        <div class="row">
+            <div class="col-lg-3">
+                <h3>{{task}}</h3>
+            </div>
+            <div class="col-lg-3">
+                <h3>{{time}}</h3>
+            </div>
+            <div class="col-lg-3">
+                <h3>{{user}}</h3>
+            </div>
+            <div class="col-lg-2">
+            {{#if owner userId }}
+                <button class="btn btn-warning delete">Delete</button>
+            {{/if}}
+            </div>
+        </div>
+</template>

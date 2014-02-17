@@ -1,0 +1,39 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "iron-router": {},
+      "uikit-2": {},
+      "uikit": {},
+      "marked": {},
+      "codemirror": {}
+    },
+    "packages": {
+      "iron-router": {
+        "git": "https://github.com/EventedMind/iron-router.git",
+        "tag": "v0.6.2",
+        "commit": "ce56e58b45624dce992490f3a1c10f10d3948bae"
+      },
+      "uikit-2": {
+        "git": "https://github.com/pwldp/meteor-uikit-2.git",
+        "tag": "v1.0.1",
+        "commit": "764702f7cba8b85df4dc43b2ffd0ebd36205d410"
+      },
+      "uikit": {
+        "git": "https://github.com/qasz/meteor-uikit.git",
+        "tag": "v1.0.0",
+        "commit": "407ace8ab900d622b635651510f0721368317447"
+      },
+      "marked": {
+        "git": "https://github.com/chuangbo/meteor-marked.git",
+        "tag": "v0.2.9",
+        "commit": "6485d6f03841501f81176e34ab375840473aa714"
+      },
+      "codemirror": {
+        "git": "https://github.com/digioak/meteor-codemirror.git",
+        "tag": "v0.0.2",
+        "commit": "39185b6e97c485e7cd65a2ef84190923c050b0d8"
+      }
+    }
+  }
+}

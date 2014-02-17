@@ -1,0 +1,29 @@
+#iron-router-progress {
+    background-color: rgb(255, 0, 0);
+    box-shadow: 0px 4px 5px #9E9E9E;
+}
+#iron-router-progress.spinner:before {
+    border-color : black;
+}
+
+.create_modal{
+    position: relative;
+    top:-400px;
+    opacity:0;
+}
+.error-404 {
+    background: url('/images/earth.jpg') no-repeat 100% 100% #000000;
+    position: fixed;
+    text-align: center;
+    vertical-align: middle;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    display: table;
+    color: white;    
+}
+.error-404 .error-body {
+    display: table-cell;
+    vertical-align: middle;
+}
