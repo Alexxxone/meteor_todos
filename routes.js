@@ -27,6 +27,10 @@ Router.map(function() {
         path: "/users/:_id",
         template: "user_todos"
     });
+    this.route("settings", {
+        path: "/settings",
+        template: "settings"
+    });
 });
 
 

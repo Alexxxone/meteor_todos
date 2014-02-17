@@ -3,7 +3,7 @@
     text = $('.new_todo')
     time = $('.new_todo_time')
     if text.val().length >= 3 and time.val().length isnt 0
-      Todos.insert({ task: $('.new_todo').val(), time: $('.new_todo_time').val(), userId: Meteor.userId() })
+      Todos.insert({ task: $('.new_todo').val(), time: $('.new_todo_time').val(), userId: Meteor.user().profile.name })
       text.val('')
       time.val('')
       $.UIkit.notify

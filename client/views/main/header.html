@@ -5,6 +5,7 @@
             {{#if currentUser}}
             Hi, {{ user_name }}!
             <a class="btn btn-warning  sign_out pull-right" type="button" href="javascript:;">Sign Out</a>
+            <a class="btn btn-primary  settings pull-right" type="button" href="javascript:;">Settings</a>
             {{else}}
             <div class="btn-group pull-right">
                 <a class="btn btn-primary  sign_in"  href="{{pathFor 'login'}}">Sign In</a>

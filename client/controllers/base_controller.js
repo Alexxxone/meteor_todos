@@ -6,12 +6,17 @@ BaseController = RouteController.extend({
     }
 });
 
-RegisterController = RouteController.extend({
+RegisterController = BaseController.extend({
     yieldTemplates: {
         'header': { to: 'header' }
     }
 });
-LoginController = RouteController.extend({
+LoginController = BaseController.extend({
+    yieldTemplates: {
+        'header': { to: 'header' }
+    }
+});
+SettingsController = BaseController.extend({
     yieldTemplates: {
         'header': { to: 'header' }
     }
