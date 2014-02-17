@@ -3,3 +3,7 @@ Handlebars.registerHelper 'owner', (userId) ->
 
 Handlebars.registerHelper 'user_name',  ->
   Meteor.user().profile.name
+Handlebars.registerHelper 'anyComments', (comments) ->
+  comments isnt undefined
+
+
