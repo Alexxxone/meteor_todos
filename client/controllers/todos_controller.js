@@ -5,10 +5,10 @@ TodosController = BaseController .extend({
     },
     data: {
         todos: function(){
-            if(Session.get('todos_filter')){
-                return Todos.find({ userId: Meteor.userId() });
+            if( Session.get('todos_filter')){
+                return Todos.find({ userId: Meteor.userId() },{sort: {created_at: -1},limit: Session.get('todosLimit') });
             }else{
-                return Todos.find();
+                return Todos.find({},{sort: {created_at: -1},limit: Session.get('todosLimit') });
             }
         },
         users: Meteor.users.find()

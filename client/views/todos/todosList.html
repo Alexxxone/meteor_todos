@@ -6,12 +6,10 @@
         <div class="col-lg-8 create_modal">
             <div class="input-group well">
                 <input type="text" class="new_todo col-lg-6" placeholder="Text" >
-                <input type="text" data-uk-timepicker="{minuteStep:15}"  class="new_todo_time col-lg-3"  placeholder="Select Time">
                 <button class="btn btn-success btn-sm clicked">Create</button>
                 <button type="button" class="close close_create_modal" >×</button>
             </div>
         </div>
-
     <div class="todoList">
             {{#each todos}}
                 {{> todo}}

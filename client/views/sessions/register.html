@@ -1,12 +1,47 @@
 <template name="register">
-    <form id="register-form" action="action" class="form-vertical">
-        <div>
-            <input type="email" id="account-email" placeholder="Email"/>
-            <input type="password" id="account-password" placeholder="Password"/>
-            <input type="password" id="confirmation_account-password" placeholder="Password Confirmation" />
-            <input type="text" id="account-name" placeholder="Your Name" />
-            <input type="submit" id="create-account" class="btn btn-success btn-sm" value="Create an Account" />
-            <a  class="btn btn-info  btn-sm sign_up" href="{{pathFor 'login'}}">Sign In</a>
+    <div class="container login">
+        <div class="row">
+            <div class="col-lg-6 col-md-offset-2">
+                <div class="well">
+                    <form id="register-form" class="bs-example form-horizontal" >
+                        <fieldset>
+                            <legend>Register</legend>
+
+                            <div class="form-group">
+                                <label for="account-email" class="col-lg-2 control-label">Email</label>
+                                <div class="col-lg-10">
+                                    <input type="email"  class="form-control" id="account-email" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="account-password" class="col-lg-2 control-label">Password</label>
+                                <div class="col-lg-10">
+                                    <input type="password"  class="form-control"  id="account-password" placeholder="Password">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmation_account-password" class="col-lg-2 control-label">Confirm Password</label>
+                                <div class="col-lg-10">
+                                    <input type="password"  class="form-control"  id="confirmation_account-password" placeholder="Password Confirmation" >
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="account-name" class="col-lg-2 control-label">Your Name</label>
+                                <div class="col-lg-10">
+                                    <input type="text"  class="form-control"  id="account-name" placeholder="Your Name" >
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-10 col-lg-offset-2">
+                                    <a class="btn btn-info  btn-sm sign_up" href="{{pathFor 'login'}}">Sign In</a>
+                                    <button type="submit" class="btn btn-primary" id="create-account" >Create an Account</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
         </div>
-    </form>
+    </div>
 </template>

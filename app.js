@@ -1,4 +1,5 @@
 if(Meteor.isClient){
+  Session.set("todosLimit", 10)
   App ={
       subs: {
           todos: Meteor.subscribe("todos"),

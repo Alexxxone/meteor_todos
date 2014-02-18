@@ -20,8 +20,9 @@
 //});
 
 
-Meteor.publish("todos", function() {
-    return Todos.find({});
+Meteor.publish("todos", function(limit) {
+    console.log(limit);
+    return Todos.find({},{order: {created_at: 1},limit: limit});
 });
 Meteor.publish("users", function() {
     return Meteor.users.find({});
@@ -33,3 +34,22 @@ Meteor.publish("user_todos", function(id) {
     return Todos.find({userId: id});
 });
 
+
+Todos.allow({
+    insert: function (userId, todo) {
+        if(userId ===  todo.userId )
+            return true;
+        return false;
+    },
+    update: function (userid, todo){
+        old_userId = Todos.findOne({_id: todo._id}).userId;
+        if(userid === Meteor.userId() &&  todo.userId === old_userId  )
+            return true;
+        return false;
+    },
+    remove: function (userId, todo){
+        if(userId ===  todo.userId )
+            return true;
+        return false;
+    }
+});

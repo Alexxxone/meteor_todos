@@ -1,13 +1,13 @@
 <template name="todo">
-        <div class="row">
+        <div class="row" style="height: 100px">
             <div class="col-lg-3">
-                <h3>{{task}}</h3>
+                <p>{{task}}</p>
+            </div>
+            <div class="col-lg-3">
+                <p>{{time}}</p>
             </div>
             <div class="col-lg-1">
-                <h3>{{time}}</h3>
-            </div>
-            <div class="col-lg-3">
-                <h3>{{userId}}</h3>
+                <p>{{sender}}</p>
             </div>
             <div class="col-lg-4">
                 <button class="btn btn-info btn-sm add_comment">Add Comment</button>
@@ -22,9 +22,9 @@
         {{#if anyComments comments }}
             <div class="row todo_comments{{_id}} hide">
                 <h1 class="col-lg-12">Comments</h1>
-                    {{#each comments}}
-                      {{> comment}}
-                    {{/each}}
+                {{#each comments}}
+                  {{> comment}}
+                {{/each}}
             </div>
         {{/if}}
         <div class="row new_comment_box{{_id}} hide">
