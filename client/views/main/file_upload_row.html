@@ -1,0 +1,16 @@
+<template name="fileUploadRow">
+    <tr>
+        <td>{{name}}</td>
+        <td>{{size}}</td>
+        <td>
+            <div class = "progress progress-striped {{uploadCompleteClass}}">
+                <div class = "bar" style="width:{{uploadProgress}}%">
+                    <span style="padding: 2px; fload:left; color:#000;">
+                        {{uploadProgress}}%
+                    </span>
+                </div>
+            </div>
+        </td>
+        <td>{{status}}</td>
+    </tr>
+</template>

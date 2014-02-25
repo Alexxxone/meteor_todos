@@ -1,6 +1,18 @@
 <template name="user_todos">
     <h1>{{ user.profile.name }} Todos! </h1>
-    {{#each user_todos}}
-        {{> todo}}
-    {{/each}}
+    <table class='table table-bordered table-hover' >
+        <thead>
+        <tr>
+            <th>Order</th>
+            <th>Created At</th>
+            <th>Author</th>
+            <th style="width: 215px">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+            {{#each user_todos}}
+                {{> todo}}
+            {{/each}}
+        <tbody>
+    </table>
 </template>

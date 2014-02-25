@@ -3,7 +3,9 @@ if(Meteor.isClient){
   App ={
       subs: {
           todos: Meteor.subscribe("todos"),
-          users: Meteor.subscribe("users")
+          users: Meteor.subscribe("users"),
+          myFiles: Meteor.subscribe("myFiles")
       }
   }
 }
+

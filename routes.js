@@ -4,6 +4,7 @@ Router.configure({
     loadingTemplate: "loading",
 
     before: function() {
+        Session.set('todosLimit',10);
         if (!Meteor.userId() && this.route.name != 'register') {
             this.render('login');
             this.render('header', {to: 'header'});

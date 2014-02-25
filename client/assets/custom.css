@@ -27,3 +27,37 @@
     display: table-cell;
     vertical-align: middle;
 }
+#canvasloader-container{
+    text-align: center;
+}
+.list{
+    list-style: none;
+}
+.list li{
+    text-align: center;
+    display: inline-block;
+    float: left;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    overflow: hidden;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+
+}
+.list li .btn-group-justified{
+    position: absolute;
+    left: 2%;
+    bottom: 10px;
+    opacity: 0;
+    transition: .4s;
+}
+.list li:hover .btn-group-justified{
+    opacity: 1;
+}
+.avatar{
+    max-height: 100px;
+}
+

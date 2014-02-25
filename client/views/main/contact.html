@@ -1,0 +1,37 @@
+<template name="contact">
+    <!-- Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Contact Us</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                    <form class="form " id="contactForm">
+                        <div class="form-group">
+                            <label for="textArea" class="col-lg-3 control-label">Your Letter</label>
+                            <div class="col-lg-9">
+                                <textarea class="form-control" rows="3" id="textArea"></textarea>
+                                <span class="help-block">Text should at least 10 symbol length.</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactFrom" class="col-lg-3 control-label">Your Name</label>
+                            <div class="col-lg-9">
+                                <input type="text" class="contactFrom form-control" id="contactFrom">
+                                <span class="help-block">Name should at least 2 symbol length.</span>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default closeContact" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary sendContact">Send email</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

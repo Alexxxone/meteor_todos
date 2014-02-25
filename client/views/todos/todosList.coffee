@@ -1,7 +1,4 @@
 @Template.todosList.events
-  'click .next': ->
-    Session.set('todosLimit', parseInt(Session.get('todosLimit'))+2)
-
   'click .clicked': ()->
     text = $('.new_todo')
     if text.val().length >= 3
@@ -38,7 +35,6 @@ notify= (text='Successfully Created!',status="success")->
   $(document).scroll ()->
     h = $(window).scrollTop() + $(window).height()
     if h > $(document).height() - 200
-      console.log 'NEED TO LOAD'
       Session.set('todosLimit', parseInt(Session.get('todosLimit'))+2)
 
 

@@ -2,8 +2,13 @@
   "packages": {
     "iron-router": {},
     "uikit-2": {},
-    "uikit": {},
     "marked": {},
-    "codemirror": {}
+    "codemirror": {},
+    "truncate": {
+      "path": "packages/truncate"
+    },
+    "jquery-jcrop": {},
+    "cfs-filesystem": {},
+    "collectionFS": {}
   }
 }

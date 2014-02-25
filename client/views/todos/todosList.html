@@ -1,18 +1,38 @@
 <template name="todosList">
-
         <div class="col-lg-4">
           <button class="btn btn-success show_create_modal">Create New</button>
         </div>
         <div class="col-lg-8 create_modal">
             <div class="input-group well">
-                <input type="text" class="new_todo col-lg-6" placeholder="Text" >
-                <button class="btn btn-success btn-sm clicked">Create</button>
-                <button type="button" class="close close_create_modal" >×</button>
+                <div class="form-group">
+                    <button type="button" class="close close_create_modal" >×</button>
+                    <div class="input-group">
+                        <input type="text" class="new_todo col-lg-6 form-control" placeholder="Text" >
+                        <span class="input-group-btn">
+                            <button class="btn btn-success clicked">Create</button>
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
     <div class="todoList">
-            {{#each todos}}
-                {{> todo}}
-            {{/each}}
+        <table class='table table-bordered table-hover' >
+            <thead>
+                <tr>
+                    <th>Order</th>
+                    <th>Created At</th>
+                    <th>Author</th>
+                    <th style="width: 215px">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each todos}}
+                  {{> todo}}
+                {{/each}}
+            <tbody>
+        </table>
+
+
+
     </div>
 </template>

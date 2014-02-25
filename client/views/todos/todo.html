@@ -1,38 +1,38 @@
 <template name="todo">
-        <div class="row" style="height: 100px">
-            <div class="col-lg-3">
-                <p>{{task}}</p>
-            </div>
-            <div class="col-lg-3">
-                <p>{{time}}</p>
-            </div>
-            <div class="col-lg-1">
-                <p>{{sender}}</p>
-            </div>
-            <div class="col-lg-4">
-                <button class="btn btn-info btn-sm add_comment">Add Comment</button>
-                {{#if anyComments comments }}
-                    <button class="btn btn-primary btn-sm show_comments">Show Comment</button>
-                {{/if}}
+
+    <tr style="height: 100px">
+        <td>{{task}}></td>
+        <td>{{prettifyDate time}}</td>
+        <td>{{sender}}</td>
+        <td>
+            <div class="btn-group btn-group-justified">
+
+                    <a href='javascript:;' class="btn btn-primary btn-xs show_comments">Comments</a>
+
                 {{#if owner userId }}
-                    <button class="btn btn-warning btn-sm delete">Delete</button>
+                    <a href='javascript:;' class="btn btn-warning btn-xs delete">Delete</a>
                 {{/if}}
             </div>
-        </div>
-        {{#if anyComments comments }}
-            <div class="row todo_comments{{_id}} hide">
-                <h1 class="col-lg-12">Comments</h1>
+        </td>
+    </tr>
+    <tr class="todo_comments{{_id}} hide">
+        <td colspan="4">
+            <button type="button" class="close" >×</button>
+            {{#if anyComments comments }}
                 {{#each comments}}
-                  {{> comment}}
+                    {{> comment}}
                 {{/each}}
+            {{/if}}
+            <div class="form-group">
+                <div class="input-group  col-lg-6">
+                    <input type="text" class="comment_text form-control" placeholder="Your Comment"/>
+                    <span class="input-group-btn">
+                         <button type="button" class="btn btn-success save_comment">Save</button>
+                    </span>
+                </div>
             </div>
-        {{/if}}
-        <div class="row new_comment_box{{_id}} hide">
-            <div class="col-lg-6">
-                <input type="text" class="comment_text col-lg-12" placeholder="Your Comment"/>
-            </div>
-            <div class="col-lg-3">
-                <button class="btn btn-success btn-sm save_comment">Save</button>
-            </div>
-        </div>
+
+
+        </td>
+    </tr>
 </template>

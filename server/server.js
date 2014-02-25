@@ -21,7 +21,6 @@
 
 
 Meteor.publish("todos", function(limit) {
-    console.log(limit);
     return Todos.find({},{order: {created_at: 1},limit: limit});
 });
 Meteor.publish("users", function() {
@@ -33,23 +32,16 @@ Meteor.publish("user", function(id) {
 Meteor.publish("user_todos", function(id) {
     return Todos.find({userId: id});
 });
-
-
-Todos.allow({
-    insert: function (userId, todo) {
-        if(userId ===  todo.userId )
-            return true;
-        return false;
-    },
-    update: function (userid, todo){
-        old_userId = Todos.findOne({_id: todo._id}).userId;
-        if(userid === Meteor.userId() &&  todo.userId === old_userId  )
-            return true;
-        return false;
-    },
-    remove: function (userId, todo){
-        if(userId ===  todo.userId )
-            return true;
-        return false;
-    }
+Meteor.publish("myFiles", function() {
+    return ImagesFS.find({ owner: this.userId });
 });
+
+var handler = {
+    "imageUrl": function (options) {
+        return {
+            blob: options.blob,
+            fileRecord: options.fileRecord
+        };
+    }
+}
+ImagesFS.fileHandlers(handler);

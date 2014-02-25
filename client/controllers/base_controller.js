@@ -16,8 +16,5 @@ LoginController = BaseController.extend({
         'header': { to: 'header' }
     }
 });
-SettingsController = BaseController.extend({
-    yieldTemplates: {
-        'header': { to: 'header' }
-    }
-});
+
+
