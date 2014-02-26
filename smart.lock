@@ -3,7 +3,6 @@
   "dependencies": {
     "basePackages": {
       "iron-router": {},
-      "uikit-2": {},
       "marked": {},
       "codemirror": {},
       "truncate": {
@@ -11,18 +10,14 @@
       },
       "jquery-jcrop": {},
       "cfs-filesystem": {},
-      "collectionFS": {}
+      "collectionFS": {},
+      "uikit-2": {}
     },
     "packages": {
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
         "tag": "v0.6.4",
         "commit": "927bbaed1b87894fb6fb70807f74ff3a5bd89f29"
-      },
-      "uikit-2": {
-        "git": "https://github.com/pwldp/meteor-uikit-2.git",
-        "tag": "v1.0.1",
-        "commit": "764702f7cba8b85df4dc43b2ffd0ebd36205d410"
       },
       "marked": {
         "git": "https://github.com/chuangbo/meteor-marked.git",
@@ -51,6 +46,11 @@
         "git": "https://github.com/raix/Meteor-CollectionFS.git",
         "tag": "v0.3.7",
         "commit": "34d9fb363472e44c6dba4a1473a9e106e107f5a9"
+      },
+      "uikit-2": {
+        "git": "https://github.com/pwldp/meteor-uikit-2.git",
+        "tag": "v1.0.1",
+        "commit": "764702f7cba8b85df4dc43b2ffd0ebd36205d410"
       },
       "cfs-storage-adapter": {
         "git": "https://github.com/CollectionFS/Meteor-cfs-storage-adapter.git",

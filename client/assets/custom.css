@@ -60,4 +60,35 @@
 .avatar{
     max-height: 100px;
 }
+.help_box{
+    z-index:1041;
+
+}
+#helpBox{
+    opacity:0;
+}
+.helpClass{
+    /*position: absolute;*/
+    opacity: 0;
+    z-index: 1041;
+    background: white;
+    color: rgb(30, 117, 30);
+}
+p.helpClass {
+    padding: 15px 10px;
+    margin: 0;
+}
+.help_background{
+    z-index: 1040;
+    width: 100%;
+    background-color: #607965;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    left: 0;
+    opacity: .5;
+
+}
+
+
 

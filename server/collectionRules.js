@@ -29,3 +29,14 @@ ImagesFS.allow({
     },
     remove: function(userId, file) {return userId && file.owner === userId; }
 });
+
+Chat.allow({
+    insert: function(userId, message) {
+        return userId && message.senderId == userId;
+    },
+
+    update: function(userId, file, fields, modifier) {
+        return false;
+    },
+    remove: function(userId, file) {return userId && message.senderId == userId; }
+});

@@ -35,6 +35,10 @@ Meteor.publish("user_todos", function(id) {
 Meteor.publish("myFiles", function() {
     return ImagesFS.find({ owner: this.userId });
 });
+Meteor.publish("myChat", function(id) {
+    return Chat.find({ $and:[{ senderId: {$in: [this.userId,id]}, receiverId: {$in: [this.userId,id]}}]});
+});
+
 
 var handler = {
     "imageUrl": function (options) {

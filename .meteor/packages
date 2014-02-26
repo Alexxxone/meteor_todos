@@ -12,7 +12,6 @@ iron-router
 marked
 codemirror
 jquery
-uikit-2
 truncate
 email
 jquery-jcrop
@@ -21,5 +20,4 @@ collectionFS
 cfs-public-folder
 cfs-storage-adapter
 cfs-filesystem
-
-
+uikit-2

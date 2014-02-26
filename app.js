@@ -4,7 +4,8 @@ if(Meteor.isClient){
       subs: {
           todos: Meteor.subscribe("todos"),
           users: Meteor.subscribe("users"),
-          myFiles: Meteor.subscribe("myFiles")
+          myFiles: Meteor.subscribe("myFiles"),
+          myChat: Meteor.subscribe("chat")
       }
   }
 }

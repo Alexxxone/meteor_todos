@@ -17,5 +17,10 @@
       document.body.appendChild(cropBox)
     else
       $('#cropModal').modal('show')
+  'click .show_help': ->
+    unless $('.help_box').length
+      frag = Meteor.render(Template.help)
+      document.body.appendChild(frag)
+@Template.header.preserve('.avatar')
 
 

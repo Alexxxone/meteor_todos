@@ -32,6 +32,13 @@ Router.map(function() {
         path: "/settings",
         template: "settings"
     });
+    this.route("chat", {
+        path: '/chat/:_id',
+        template: "chat"
+
+    });
+
+
 });
 
 

@@ -1,7 +1,6 @@
 {
   "packages": {
     "iron-router": {},
-    "uikit-2": {},
     "marked": {},
     "codemirror": {},
     "truncate": {
@@ -9,6 +8,7 @@
     },
     "jquery-jcrop": {},
     "cfs-filesystem": {},
-    "collectionFS": {}
+    "collectionFS": {},
+    "uikit-2": {}
   }
 }

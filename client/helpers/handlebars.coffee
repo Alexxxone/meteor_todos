@@ -16,3 +16,10 @@ Handlebars.registerHelper "avatar_url",  ->
 
 Handlebars.registerHelper "anyComments", (comments) ->
     if comments isnt undefined then true else false
+Handlebars.registerHelper "message_color", (senderId) ->
+  if senderId is Meteor.userId() then 'info' else ''
+
+
+
+
+

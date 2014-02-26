@@ -1,0 +1,13 @@
+<template name="message">
+
+        <tr class="{{message_color senderId }}">
+            {{#if owner senderId}}
+            <td>{{{avatar}}}    </td>
+            {{else}}
+                <td><img src='{{opponent.profile.name}}' class='avatar' alt='Avatar' />{{opponent.profile.name}}</td>
+            {{/if}}
+            <td>{{text}}</td>
+            <td>{{prettifyDate created_at}}</td>
+        </tr>
+
+</template>

@@ -1,0 +1,27 @@
+<template name="chat">
+    <h1>CHAT</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Sender</th>
+            <th>Message</th>
+            <th>Created At</th>
+        </tr>
+        </thead>
+        <tbody>
+            {{#each messages}}
+
+                     {{>message }}
+
+            {{/each}}
+        </tbody>
+    </table>
+    <div class="form-group">
+        <div class="input-group  col-lg-6">
+            <input type="text" class="message_text form-control" placeholder="Your Message"/>
+            <span class="input-group-btn">
+                 <button type="button" class="btn btn-success save_message">Send</button>
+            </span>
+        </div>
+    </div>
+</template>
